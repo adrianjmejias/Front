@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" id="button-open">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#fff" stroke-width="3"/>
+                    <path d="M0,14 30,14" stroke="#fff" stroke-width="3"/>
+                    <path d="M0,23 30,23" stroke="#fff" stroke-width="3"/>
+                </svg>
+            </a>
+        </span>
+
+        <ul class="navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" id="button-close">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div id="main">
+        <h1>Responsive side menu</h1>
+    </div>
+    <script>
+        var ButtonOpen = document.getElementById("button-open");
+        var ButtonClose = document.getElementById("button-close");
+        var sideMenu = document.getElementById("side-menu");
+        var main = document.getElementById("main");
+
+
+        //Open Side Menu
+        ButtonOpen.addEventListener("click", ()=>{
+            sideMenu.style.width = '250px';
+            main.style.marginLeft = '250px'; 
+        });
+
+        //Close side Menu
+        ButtonClose.addEventListener("click", ()=>{
+            sideMenu.style.width = '0';
+            main.style.marginLeft = '0'; 
+        });
+
+
+    </script>
+</body>
+</html>

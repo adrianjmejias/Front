@@ -1,0 +1,18 @@
+body{
+    background: #222;
+}
+
+.box{
+    background: white;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    top:200px;
+}
+
+.box:hover{
+    transition-duration: 3s;
+    background:red;
+    transform: rotateZ(180deg)
+}
